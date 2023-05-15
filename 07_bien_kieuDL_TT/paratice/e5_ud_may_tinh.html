@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Caculator</h1>
+<input id="i1" type="text">
+<input id="i2" type="text">
+<br>
+<br>
+<button onclick="ham1()">Addition(+)</button>
+<button onclick="ham2()">Subtraction(-)</button>
+<button onclick="ham3()">Multiplication(X)</button>
+<button onclick="ham4()">Division(/)</button>
+<script>
+    function ham1() {
+        let input1= document.getElementById('i1').value;
+        let input2= document.getElementById('i2').value;
+        let i1 = parseInt(input1);
+        let i2 = parseInt(input2);
+        let tong = i1+i2;
+        alert("tong la: " + tong);
+
+    }
+    function ham2() {
+        let input1= document.getElementById('i1').value;
+        let input2= document.getElementById('i2').value;
+        let i1 = parseInt(input1);
+        let i2 = parseInt(input2);
+        let hieu = i1-i2;
+        alert('hieu la: ' + hieu);
+
+
+    }
+    function ham3() {
+        let input1= document.getElementById('i1').value;
+        let input2= document.getElementById('i2').value;
+        let i1 = parseInt(input1);
+        let i2 = parseInt(input2);
+        let tich = i1*i2;
+        alert('Tich la: ' + tich);
+
+    }
+    function ham4() {
+        let input1 = document.getElementById('i1').value;
+        let input2 = document.getElementById('i2').value;
+        let i1 = parseInt(input1);
+        let i2 = parseInt(input2);
+        let thuong = i1/i2;
+        alert('Thuong la ' + thuong );
+
+
+    }
+
+
+</script>
+
+
+</body>
+</html>

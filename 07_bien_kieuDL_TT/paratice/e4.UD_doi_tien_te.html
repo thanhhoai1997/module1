@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        main {
+            display: flex;
+        }
+
+        .d1 {
+            flex: 30%;
+            background: red;
+        }
+
+        .d2 {
+            flex: 20%;
+            background: green;
+        }
+
+        .d3 {
+            flex: 30%;
+            background: blue;
+        }
+
+        .d4 {
+            flex: 20%;
+            display: flex;
+            align-items: center;
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div class="d1">
+        <strong>Amount</strong>
+        <br>
+        <input type="text" id="nhapgiatri">
+    </div>
+
+    <div class="d2">
+        <strong>From Currency</strong>
+        <br>
+        <select id="s1">
+            <option value="VND">VND</option>
+            <option value="USD">USD</option>
+        </select>
+    </div>
+
+    <div class="d3">
+        <strong>To Currency</strong>
+        <br>
+        <select id="s2">
+            <option value="USD">USD</option>
+            <option value="VND">VND</option>
+        </select>
+    </div>
+
+    <div class="d4">
+        <button style="background: blue; color: white" onclick="ham()">Convert</button>
+    </div>
+</main>
+
+
+<!--1$ = 23.400VND-->
+<script>
+    function ham() {
+        let input = document.getElementById('nhapgiatri').value;
+        let select1 = document.getElementById('s1').value;
+        let select2 = document.getElementById('s2').value;
+        if (select1 == select2) {
+            alert(input);
+        }
+        if (select1 == "VND" && select2 == "USD") {
+            let uotput1 = input / 23.400;
+            alert(uotput1);
+
+        }
+        if (select1 == "USD" && select2 == "VND") {
+            let uotput2 = 23.400 * input;
+            alert(uotput2);
+        }
+
+    }
+</script>
+</body>
+</html>
