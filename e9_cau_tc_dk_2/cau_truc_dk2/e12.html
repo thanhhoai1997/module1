@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinh lai suat ngan hang</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>Số tiền vay</th>
+        <th>Số tháng vay</th>
+        <th>lãi suất hàng tháng</th>
+    </tr>
+    <tr>
+        <td>89000000000</td>
+        <td>12</td>
+        <td>10%</td>
+    </tr>
+</table>
+<script>
+    let thang = +prompt('nhap thang');
+    let so_tien_vay = 89000000;
+    let lai_suat_thang = 10/100;
+    let tien_goc_tra_hang_thang = so_tien_vay/12;
+
+    switch (thang) {
+        case 1:
+            lai_suat1 = (so_tien_vay*lai_suat_thang)/12;
+            alert('lai suat thang 1: ' + lai_suat1 + ' dong');
+            break;
+        case 2:
+            lai_suat2 = ((so_tien_vay - tien_goc_tra_hang_thang)*lai_suat_thang)/12;
+            alert('lai suat thang 2: ' + lai_suat2 + ' dong');
+            break;
+        case 3:
+            lai_suat3 = ((so_tien_vay - tien_goc_tra_hang_thang*2)*lai_suat_thang)/12;
+            alert('lai suat thang 2: ' + lai_suat3 + ' dong');
+            break;
+        case 4:
+            lai_suat4 =((so_tien_vay - tien_goc_tra_hang_thang*3)*lai_suat_thang)/12;
+            alert('lai suat thang 2: ' + lai_suat4 + ' dong');
+            break;
+        case 5:
+            lai_suat5 =((so_tien_vay - tien_goc_tra_hang_thang*4)*lai_suat_thang)/12;
+            alert('lai suat thang 2: ' + lai_suat5 + ' dong');
+            break;
+        case 6:
+            lai_suat6 =((so_tien_vay - tien_goc_tra_hang_thang*5)*lai_suat_thang)/12;
+            alert('lai suat thang 2: ' + lai_suat6 + ' dong');
+            break;
+        case 7:
+            lai_suat7 =((so_tien_vay - tien_goc_tra_hang_thang*6)*lai_suat_thang)/12;
+            alert('lai suat thang 2: ' + lai_suat7 + ' dong');
+            break;
+        case 8:
+            lai_suat8 =((so_tien_vay - tien_goc_tra_hang_thang*7)*lai_suat_thang)/12;
+            alert('lai suat thang 2: ' + lai_suat8 + ' dong');
+            break;
+        case 9:
+            lai_suat9 =((so_tien_vay - tien_goc_tra_hang_thang*8)*lai_suat_thang)/12;
+            alert('lai suat thang 2: ' + lai_suat9 + ' dong');
+            break;
+        case 10:
+            lai_suat10 =((so_tien_vay - tien_goc_tra_hang_thang*9)*lai_suat_thang)/12;
+            alert('lai suat thang 2: ' + lai_suat10 + ' dong');
+            break;
+        case 11:
+            lai_suat11 =((so_tien_vay - tien_goc_tra_hang_thang*10)*lai_suat_thang)/12;
+            alert('lai suat thang 2: ' + lai_suat11 + ' dong');
+            break;
+        case 12:
+            lai_suat12 =((so_tien_vay - tien_goc_tra_hang_thang*11)*lai_suat_thang)/12;
+            alert('lai suat thang 2: ' + lai_suat12 + ' dong');
+            break;
+        default:
+            alert('so thang nhap phai tu 1 -> 12');
+            break;
+    }
+</script>
+
+</body>
+</html>

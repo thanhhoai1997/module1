@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // phi thue bao co dinh 1 thang = 25000
+    // 600 dong cho moi phut goi cua 50phut dau tien
+    // 400 dong cho moi phut goi cua 150phut dau tien
+    // 200 dong cho moi phut goi cua 250phut dau tien
+    //100 dong cho moi phut goi khi goi tren 250ph
+    let phithuebao = parseInt(25000);
+    let phutgoi = +prompt('nhap so phut: ');
+    let sotien1;
+    let sotien2;
+    let sotien3;
+    let sotien4;
+
+    if(phutgoi <= 50){
+       sotien1 = phithuebao + 600*phutgoi;
+        alert('cuoc dien thoai: ' + sotien1 +'/thang');
+
+    }else if (phutgoi > 50 && phutgoi <= 150){
+        sotien2 = phithuebao + 600*50 + (phutgoi - 50)*400;
+        alert('cuoc dien thoai: ' +sotien2 +'/thang');
+    }else if (phutgoi > 150 && phutgoi <= 250 ){
+        sotien3 = phithuebao + 50*600 + 100*400 + (phutgoi - 150)*200;
+        alert('cuoc dien thoai: '+sotien3+'/thang');
+
+    }else {
+        sotien4 = phithuebao + 50*600 + 100*400 + 100*200 + (phutgoi - 250)*100;
+        alert('cuoc dien thoai: ' +sotien4+'/thang');
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let bai_kiem_tra = +prompt('nhap diem');
+    let thi_giua_ki = +prompt('nhap diem ');
+    let thi_cuoi_nam = +prompt('nhap diem');
+    let diem_trung_binh = (bai_kiem_tra + thi_giua_ki * 2 + thi_cuoi_nam * 3) / 6;
+    alert('diem trung binh: ' + diem_trung_binh);
+
+    if (diem_trung_binh >= 8 && diem_trung_binh <= 10) {
+        alert('hoc sinh gioi');
+    } else if (diem_trung_binh >= 6.5 && diem_trung_binh < 8) {
+        alert('hoc sinh kha');
+    } else if (diem_trung_binh >= 5 && diem_trung_binh < 6.5) {
+        alert('hoc sinh trung binh');
+    } else {
+        alert('hoc sinh yeu');
+
+    }
+
+    }
+
+
+
+
+<script>
+
+</body>
+</html>

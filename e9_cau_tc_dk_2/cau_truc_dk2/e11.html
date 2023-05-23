@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thue thu nhap ca nhan</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>bậc</th>
+        <th>thu nhập tháng</th>
+        <th>Số thuế phải nộp</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>TN <= 5tr</td>
+        <td>TN x 5%</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>5tr < TN <= 10tr</td>
+        <td>TN x 10% - 0.25tr</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>10tr < TN <= 18tr</td>
+        <td>TN x 15% - 0.75tr</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>18tr < TN <= 32tr</td>
+        <td>TN x 20% - 1.65tr</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>32tr < TN <= 52tr</td>
+        <td>TN x 25% - 3.25tr</td>
+
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>52tr < TN <= 80t</td>
+        <td>TN x 30% - 5.85tr</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>TN > 80tr</td>
+        <td>TN x 35% - 9.85tr</td>
+    </tr>
+</table>
+<script>
+    let thu_nhap = +prompt('nhap so tien ');
+    if (thu_nhap <= 5){
+        thue1 = (thu_nhap*5)/100;
+        document.write('so tien thue phai nop la: ' + thue1 + ' trieu dong');
+    }else if (thu_nhap > 5 && thu_nhap <= 10){
+        thue2 = (thu_nhap*10)/100 - 0.25;
+        document.write('so tien thue phai nop la: ' + thue2+ ' trieu dong');
+    }else if (thu_nhap > 10 && thu_nhap <=18){
+        thue3 = (thu_nhap*15)/100 - 0.75;
+        document.write('so tien thue phai nop la: ' + thue3+ ' trieu dong');
+    }else if (thu_nhap>18 && thu_nhap <= 32){
+        thue4 = (thu_nhap*25)/100 - 3.25;
+        document.write('so tien thue phai nop la: ' + thue4+ ' trieu dong');
+    }else if (thu_nhap > 52 && thu_nhap <= 80){
+        thue5 = (thu_nhap *30)/100 - 5.85;
+        document.write('so tien thue phai nop la: ' + thue5+ ' trieu dong');
+    }else {
+        thue6 = (thu_nhap*35)/100 - 9.85;
+        document.write('so tien thue phai nop la: ' + thue6+ ' trieu dong');
+    }
+</script>
+
+</body>
+</html>

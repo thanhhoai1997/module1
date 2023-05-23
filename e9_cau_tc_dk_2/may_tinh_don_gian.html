@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <h1>Calcuator</h1>
+    <input type="text" id='nhan'>
+    <br>
+    <br>
+    <input type="button" value="1" onclick="ham1(this.value)">
+    <input type="button" value="2" onclick="ham1(this.value)">
+    <input type="button" value="3" onclick="ham1(this.value)">
+    <input type="button" value="+" onclick="ham1(this.value)">
+    <br>
+    <br>
+    <input type="button" value="4" onclick="ham1(this.value)">
+    <input type="button" value="5" onclick="ham1(this.value)">
+    <input type="button" value="6" onclick="ham1(this.value)">
+    <input type="button" value="-" onclick="ham1(this.value)">
+
+    <br>
+    <br>
+    <input type="button" value="7" onclick="ham1(this.value)">
+    <input type="button" value="8" onclick="ham1(this.value)">
+    <input type="button" value="9" onclick="ham1(this.value)">
+    <input type="button" value="*" onclick="ham1(this.value)">
+
+    <br>
+    <br>
+    <input type="button" value="C" onclick="ham1(this.value)">
+    <input type="button" value="0" onclick="ham1(this.value)">
+    <input type="button" value="=" onclick="ham1(this.value)">
+    <input type="button" value="/" onclick="ham1(this.value)">
+
+    <script>
+        var so1='';
+        var so2='';
+        var tt='';
+        var kq ='0';
+
+
+        function ham1(value) {
+
+            switch (value) {
+                case '1':
+                case '2':
+                case '3':
+                case '4':
+                case '5':
+                case '6':
+                case '7':
+                case '8':
+                case '9':
+                    if(tt == ''){
+                        so1 = so1 + value;
+                        document.getElementById('nhan').value =so1;
+                    }else {
+                        so2 += value;
+                        document.getElementById('nhan').value = so2;
+                    }
+                    break;
+                case '+':
+                case '-':
+                case '*':
+                case '/':
+                        tt = value;
+                        document.getElementById('nhan').value = tt;
+                        break;
+                case '=':
+                        switch (tt) {
+                            case "+":
+                                kq = parseInt(so1)+parseInt(so2);
+                                document.getElementById('nhan').value=kq;
+                                break;
+                            case "-":
+                                kq = parseInt(so1)-parseInt(so2);
+                                document.getElementById('nhan').value=kq;
+                                break;
+                            case "*":
+                                kq = parseInt(so1)*parseInt(so2);
+                                document.getElementById('nhan').value=kq;
+                                break;
+                            case "/":
+                                kq = parseInt(so1)/parseInt(so2);
+                                document.getElementById('nhan').value=kq;
+                                break;
+                        }
+                 case 'C':
+                     so1='';
+                    so2='';
+                    tt='';
+                    kq=0;
+
+            }
+
+            }
+
+
+
+
+    </script>
+
+
+
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bậc 1 (0 đến 50 chu): 1.678 đồng/chu
+    // Bậc 2 (51 đến 100 chu): 1.734 đồng/chu
+    // Bậc 3 (101 đến 200 chu): 2.014 đồng/chu
+    // Bậc 4 (201 đến 300 chu): 2.536 đồng/chu
+    // Bậc 5 (301 đến 400 chu): 2.834 đồng/chu
+    // Bậc 6 (401 kWh trở lên): 2.927 đồng/chu
+    let so_chu = +prompt('nhap so chu dien: ');
+    let muc1 = 50*1.678;
+    let muc2 = 50*1.734;
+    let muc3 = 100*2.014;
+    let muc4 = 100*2.536;
+    let muc5 = 100*2.834;
+
+    if ( so_chu >= 0 && so_chu <= 50){
+        sotien1 = so_chu*1.678;
+        alert('so tien phai tra: ' + sotien1 + ' nghin dong');
+    }else if ( so_chu >= 51 && so_chu <= 100){
+        sotien2= muc1 + (so_chu - 50)*1.734;
+        alert('so tien phai tra: ' + sotien2 +' nghin dong' );
+    }else if (so_chu >= 101 && so_chu <= 200){
+        sotien3= muc1 + muc2 + (so_chu - 100)*2.014;
+        alert('so tien phai tra: ' + sotien3 + ' nghin dong');
+    }else if (so_chu >= 201 && so_chu <= 300){
+        sotien4 = muc1 + muc2 + muc3 + (so_chu -200)*2.536;
+        alert('so tien phai tra: ' + sotien4+ ' nghin dong');
+    }else if (so_chu >= 301 && so_chu <= 400){
+        sotien5 = muc1+muc2+muc3+muc4+ (so_chu - 300)*2.834;
+        alert('so tien phai tra: ' + sotien5+ ' nghin dong');
+    }else {
+        sotien6 = muc1+muc2+muc3+muc4+muc5 + (so_chu - 400)*2.927;
+        alert('so tien phai tra: ' + sotien6+ ' nghin dong');
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //pt bac 2 : ax^2 + bx + c = 0
+    // delta = b^2 - 4ac
+    // delta < 0 => pt vo nghiem
+    // delta = 0 => pt co nghiem kep x1 = x2 = =b/2a
+    // delta> 0 =>pt co 2 nghiem : x1 = (-b + sqrt(delta))/2a ; x2= (-b - sqrt(delta))/2a
+    let a = +prompt('nhap a');
+    let b = +prompt('nhap b');
+    let c = +prompt('nhap c');
+    let delta = b*b - 4*a*c;
+    let 
+    alert('delta = ' + delta);
+
+    if(delta < 0){
+        alert('pt vo nghiem');
+    }else if(delta = 0){
+        x = -b/2*a;
+        alert('pt co nghiem kep x =  ' + x);
+    }else {
+        x1 = (-b + Math.sqrt(delta))/2*a;
+        x2 = (-b - Math.sqrt(delta))/2*a;
+        alert('pt co 2 nghiem x1 = ' + x1);
+        alert('x2 = '+ x2);
+    }
+
+</script>
+
+</body>
+</html>

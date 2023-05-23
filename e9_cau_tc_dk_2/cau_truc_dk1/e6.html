@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // tinh doanh thu theo hoa don cua khac hang
+    // gia su co 3 bac doanh thu
+    // 1. 0 - 200.000 => 2% hoa hong
+    // 2. 200.000 - 500.000 => 5% hoa hong
+    // 3. 500.000 => 10% hoa hong
+    let hoa_don = +prompt('nhap so tien: ');
+    let muc1 = (hoa_don*2)/100;
+    let muc2 = (200000*2)/100 + ((hoa_don - 200000)*5)/100;
+    let muc3 = (200000*2)/100 + (300000*5)/100 + ((hoa_don - 500000)*10)/100;
+
+    if(hoa_don < 200000){
+        alert('so tien hoa hong ban nhan duoc la 2%: '+ muc1 +'  dong');
+    }else if (hoa_don >= 200000 && hoa_don < 500000){
+        alert('so tien hoa hong ban nhan duoc la 5%: '+ muc2 +'  dong');
+    }else if (hoa_don >= 500000){
+        alert('so tien hoa hong ban nhan duoc la 10%: '+ muc3 +'  dong');
+    }
+</script>
+
+</body>
+</html>
