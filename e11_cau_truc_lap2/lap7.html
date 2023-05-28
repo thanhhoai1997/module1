@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <button value="choi" onclick="ham()">choi</button>
+</form>
+<script>
+    function ham() {
+        let nhap_khoang = parseInt(prompt('nhap 1 : [10 -> 15]' + '---' + 'nhap 2 : [20 -> 25]' + '---' +
+            'nhap 3 : [30 -> 35]'))
+        let count = 0;
+        switch (nhap_khoang) {
+            case 1:
+                do {
+                    alert('moi ban chon so: ')
+                    for (let i = 10; i <= 15; i++) {
+                        alert(i);
+                    }
+                    let so_doan = prompt('so ban chon la : ');
+                    if (so_doan == 13) {
+                        alert('chuc mung ban')
+                        break;
+
+                    } else if (so_doan > 13 && so_doan <= 15) {
+                        alert('lon hon so doan')
+                    } else if (so_doan < 13 && so_doan >= 10) {
+                        alert('be thua so doan')
+                    } else {
+                        alert('ban nhap gia tri ngoai khoang');
+                    }
+                    count++;
+                    if (count == 3) {
+                        alert('ban da chon qua so lan quy dinh')
+                        break;
+                    }
+                    alert('vui long nhap lai !')
+
+                } while (count < 3)
+            case 2:
+                do {
+                    alert('moi ban chon');
+                    for (let i = 20; i <= 25; i++) {
+                        alert(i);
+                    }
+                    let so_doan = prompt('so ban chon la :');
+                    if (so_doan == 22) {
+                        alert('chuc mung ban')
+                        break;
+
+                    } else if (so_doan > 22 && so_doan <= 25) {
+                        alert('lon hon so doan')
+                    } else if (so_doan < 22 && so_doan >= 20) {
+                        alert('be thua so doan')
+                    } else {
+                        alert('ban nhap gia tri ngoai khoang');
+                    }
+                    count++;
+                    if (count == 3) {
+                        alert('ban da chon qua so lan quy dinh')
+                        break;
+                    }
+                    alert('vui long nhap lai !')
+
+
+                } while (count < 3)
+                break;
+            case 3:
+                do {
+                    alert('moi ban chon');
+                    for (let i = 30; i <= 35; i++) {
+                        alert(i);
+                    }
+                    let so_doan = prompt('so ban chon la :');
+                    if (so_doan == 35) {
+                        alert('chuc mung ban')
+                        break;
+
+                    } else if (so_doan < 35 && so_doan >= 30) {
+                        alert('be thua so doan')
+                    } else {
+                        alert('ban nhap gia tri ngoai khoang');
+                    }
+                    count++;
+                    if (count == 3) {
+                        alert('ban da chon qua so lan quy dinh')
+                        break;
+                    }
+                    alert('vui long nhap lai !')
+
+
+                } while (count < 3)
+                break;
+            default:
+                alert('khong co khoang nay trong game : vui long click "choi" de chon lai');
+                break;
+        }
+    }
+
+</script>
+</body>
+</html>

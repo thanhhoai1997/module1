@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt('nhap luong so fibonacci can tinh'))
+    let sum = 0;
+    let f0 = 0;
+    let f1 = 1;
+    let fn;
+    for (i = 0 ; i <= n; i++){
+        if (i < 2){
+            document.writeln(i);
+            sum = sum + i
+        }else {
+            fn = f0 + f1;
+            f0 = f1;
+            f1 = fn;
+            document.writeln(fn);
+            sum = sum + fn;
+        }
+
+
+    }
+    document.writeln('tong cac so trong day' + sum)
+
+</script>
+
+</body>
+</html>

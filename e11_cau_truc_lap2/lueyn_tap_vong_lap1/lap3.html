@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt('nhap so luong so fibonacci muon in ra'));
+    // f0 = 0, f1 = 1, fi = f(i-1) + f(i -2)
+    let f0 = 0 ;
+    let f1 = 1;
+    let  fn;
+
+    for (let i = 0 ; i <= n; i++){
+        if ( i < 2){
+            document.writeln(i);
+        }else {
+            fn = f0 + f1;
+            f0 = f1;
+            f1 = fn;
+            document.writeln(fn);
+
+
+        }
+    }
+</script>
+
+</body>
+</html>

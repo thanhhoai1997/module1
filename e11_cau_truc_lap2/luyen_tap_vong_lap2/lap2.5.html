@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // so tien ban dau 80tr
+    // so thang vay 6
+    // lai suat 8%/thang
+    // so tien phai tra 1 thang 80/6
+    // lai thang 1 = 80*8/100
+    //lai thang 2 = ((80-so tien phai tra 1 thang)*8/100)%12
+    // lai thang 3 = ((80-so tien phai tra 1 thang*2)*8/100)%12
+</script>
+<script>
+    let so_tien_phai_tra_1_thang = 80000000/6;
+    let = tong_so_tien_lai_6_thang = 0;
+    for (let i = 0 , a = 1; i < 6 , a <=6; i++, a++){
+       so_tien_lai_tung_thang =  ((80000000 - so_tien_phai_tra_1_thang*i)*8/100)/6
+        document.writeln('lai thang : ' + a + ' =' +so_tien_lai_tung_thang+ ' nghin dong')
+        tong_so_tien_lai_6_thang = tong_so_tien_lai_6_thang + so_tien_lai_tung_thang;
+        document.write('<br>')
+    }
+    document.write('so tien lai phai tra trong 6 thang la : ' + tong_so_tien_lai_6_thang);
+
+</script>
+
+</body>
+</html>

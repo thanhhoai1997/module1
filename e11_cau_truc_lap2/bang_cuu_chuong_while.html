@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var bang_cuu_chuong = '<table border="1">';
+    var i = 1;
+    var j = 2;
+    while (i <= 9){
+        bang_cuu_chuong = bang_cuu_chuong + '<tr>';
+        while (j <= 8){
+            bang_cuu_chuong = bang_cuu_chuong + '<td>' + j + 'x' + i + '=' + j*i + '</td>';
+            j++;
+        }
+        bang_cuu_chuong = bang_cuu_chuong + '</tr>';
+        i++;
+        j = 2;
+    }
+    bang_cuu_chuong = bang_cuu_chuong + '</table>';
+    document.write(bang_cuu_chuong);
+</script>
+
+</body>
+</html>
