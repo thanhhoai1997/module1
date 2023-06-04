@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let f0 = 0;
+    let f1 = 1;
+    let fn ;
+    for (let i = 1; i < 10; i++){
+        fn = f0 + f1;
+        f0 = f1;
+        f1 = fn;
+        if (fn % 5 == 0){
+            alert(fn + ' la so dau tien chia het cho 5 trong day');
+            break;
+        }
+    }
+</script>
+
+</body>
+</html>

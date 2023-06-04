@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var courses = [
+        {
+            id: 1,
+            name: 'javascrip',
+            coin: 250
+        },
+        {
+            id: 2,
+            name: 'html,css',
+            coin: 0
+        },
+        {
+            id: 3,
+            name: 'ruby',
+            coin: 0
+        },
+        {
+            id: 4,
+            name: 'PHP',
+            coin: 400
+        },
+        {
+            id: 5,
+            name: 'ReactJs',
+            coin: 500
+        },
+    ];
+    //forEach(): duyet qua tung phan tu trong mang
+    // courses.forEach(function (course,index) {
+    //     console.log(index,course);
+    //
+    // })
+    //every: kiem tra ta ca cac phan tu trong mang thoa man 1 dieu kien gi do,tra ve true or false
+  // var isFree =  courses.every(function (course,index) {
+  //       return course.coin === 0
+  //   })
+  //   console.log(isFree);
+  //some: chi can 1 phan tu trong mang dung thi tra ve gia tri dung
+    var isFree =  courses.some(function (course,index) {
+        return course.coin === 0;
+    });
+    console.log(isFree)
+</script>
+
+</body>
+</html>

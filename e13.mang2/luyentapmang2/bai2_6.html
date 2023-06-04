@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let char = [];
+    for (let i = 0; i < 10;i++){
+        char[i] = prompt('nhap ki tu');
+    }
+    for (let i = 0; i < char.length ;i++){
+        if (char[i] === '-'){
+
+            char.splice(i,1,'_');
+        }
+    }
+    document.writeln(char)
+
+</script>
+
+</body>
+</html>

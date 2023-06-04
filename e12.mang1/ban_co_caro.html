@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Caro Game Simple</h1>
+<p id="carogame"></p>
+<input type="button" value="Change Value" onclick="ham1()">
+<script>
+    let b = document.getElementById('carogame');
+    let array = [];
+    let data = "";
+    for (let i = 0; i< 5; i++){
+        array[i] = new Array(0,0,0,0,0)
+    }
+    for (let  i = 0; i< 5; i++){
+        data += '<br>';
+        for (let j =0; j <5;j++){
+            data += array[i][j] + '&nbsp;&nbsp;';
+        }
+    }
+    b.innerHTML = data;
+    function ham1() {
+        let positionX = prompt('nhap x: ')
+        let spoitionY = prompt('nhap y: ')
+        data = '';
+        array[positionX][spoitionY] = 'x';
+        for (i = 0; i< 5;i++){
+            data+= '<br>';
+            for (j = 0; j<5; j++){
+                data+= array[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+
+        }
+        b.innerHTML = '<hr>' + data;
+
+    }
+</script>
+
+</body>
+</html>

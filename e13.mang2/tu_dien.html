@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input id="i1" type="text">
+    <input type="button" value="tim kiem" onclick="ham1()">
+    <p id="i2"></p>
+</form>
+<script>
+    function ham1() {
+        let array1 = ['history', 'english', 'math','physics'];
+        let array2 = ['lich su', 'tieng anh','toan','vat ly'];
+        let a = document.getElementById('i1').value;
+        for (let i = 0; i< array1.length;i++){
+            if(a == array1[i]  ){
+                document.getElementById('i2').innerHTML=i + ':'+array2[i]
+                return;
+            }
+            else {
+                document.getElementById('i2').innerHTML='khong tim thay'
+            }
+        }
+
+    }
+</script>
+
+</body>
+</html>

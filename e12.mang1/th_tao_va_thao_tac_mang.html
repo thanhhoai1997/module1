@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let  language = ['php','js','java','dart',null,5,{}];
+//to string: chuyen sang string
+    console.log(language.toString());
+    // join: bien arry thanh 1 chuoi
+    console.log(language.join('-'));
+    //pop: xoa di phan tu cuoi mang, va tra ve phan tu da xoa
+    console.log(language.pop())
+    //shift: xoa di phan tu dau mang va tra ve phan tu da xoa
+    console.log(language.shift())
+    console.log(language)
+    //push: them vao 1 hoac nhieu vao phan tu cuoi mang
+    console.log(language.push('dart'))
+    console.log(language)
+    //unshift: them phan tu vai dau mang
+    console.log(language.
+    unshift('hoai','nguyen'))
+    console.log()
+    //splicing: xoa, cat hoac chen phan tu moi vao mang
+    //+ xoa: (dem chi muc) language.splice(a,b) : a la chi muc bat dau.. b la so luong phan tu muon xoa
+    language.splice(1 ,1)
+    console.log(language)
+    // + chen : se chen o con tro dat o chi muc a
+    language.splice(1,2,'hello')
+    console.log(language)
+    //concat : noi cac array
+    let a1 = ['xuan','ha','thu','dong'];
+    let a2 = ['nhat', 'nhi', 'tam', 'tu'];
+    console.log(a1.concat(a2))
+    //spicing: cat 1 vai element cua mang hoac cat toan bo (cat tu vi tri a den vi tri b)
+    console.log(language.slice(1,2))
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var string =prompt('nhap  vao 1 cau: ');
+    var sotu = 0
+    for (let i = 0; i<string.length;i++){
+        if (string[i] === ' '){
+            sotu++
+        }else if (string[i] === string[string.length-1]){
+            sotu++
+        }
+
+
+    }
+    document.write('so tu la: ' + sotu);
+
+</script>
+
+</body>
+</html>

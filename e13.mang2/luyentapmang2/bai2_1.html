@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang1 = [];
+    let mang2 = []
+    for(let i = 0 ; i < 4;i++){
+        mang1 = new Array(0,0,0,0);
+        mang2.push(mang1)
+
+    }
+
+
+    for (let i = 0 ; i < mang2.length; i++ ){
+        for (let j = 0; j<mang1.length; j++){
+            mang2[i][j] = +prompt('nhap gia tri tai index: ' + i + '.' + j + ' cho mang');
+
+        }
+    }
+    console.log(mang2)
+    for(let i in mang2){
+        console.log('row' + i)
+        for(let j in mang2){
+            console.log(mang2[i][j])
+
+        }
+
+
+    }
+
+
+
+</script>
+
+</body>
+</html>

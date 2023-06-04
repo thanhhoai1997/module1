@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var animals = [
+        {
+            id:1,
+            name: 'hoai',
+            age:18
+        },
+        {
+            id: 2,
+            name:'nguyen',
+            age: 19
+        }
+    ];
+    var animals2= animals.map(function (animal) {
+        if (animal.name == 'hoai'){
+            animal.name = 'le'
+        }
+        return animal;
+
+    })
+    console.log(animals2)
+    
+</script>
+
+</body>
+</html>

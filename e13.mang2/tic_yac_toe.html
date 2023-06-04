@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        section{
+            display: flex;
+        }
+
+        div{
+            height: 50px;
+            width: 50px;
+            border: 1px solid;
+        }
+
+    </style>
+</head>
+<body>
+<h1>Caro Game</h1>
+<!--<p id="h1"></p>-->
+<main></main>
+<input type="button" value="Change Value" onclick="ham1()">
+<script>
+    // let b = document.getElementById('h1');
+    let array = [];
+    let nextTurn = false;
+    // let data = '';
+
+    for (let i = 0; i < 5; i++) {
+        array[i] = new Array();
+        const row = document.createElement("section");
+
+        for (let j = 0; j < 5; j++) {
+            array[i][j] = '';
+            const cell = document.createElement("div");
+
+            cell.onclick = function(){
+                const tmp = nextTurn ? "o" : "x";
+                cell.innerHTML = tmp;
+                array[i][j] = tmp;
+                nextTurn = true;
+
+                if(checkWin()){
+                    alert(`${tmp} wim`)
+                }
+                console.log(array);
+
+
+            };
+
+            row.appendChild(cell);
+        }
+
+        document.querySelector("main").appendChild(row);
+    }
+
+    console.log(array);
+
+   /* for (let i = 0; i < 5; i++) {
+        array[i] = new Array('.', '.', '.', '.', '.');
+    }
+    for (let i = 0; i < 5; i++) {
+        data += '<br>';
+        for (let j = 0; j < 5; j++) {
+            data += array[i][j] + '&nbsp;&nbsp;';
+        }
+    }
+    b.innerHTML = data;
+
+    console.log(array);
+    function ham1() {
+
+            let nhap1 = prompt('nhap x')
+            let nhap2 = prompt('nhap y')
+            data = '';
+
+            array[nhap1][nhap2] = 'x';
+        console.log(array);
+
+
+
+        //     for (i = 0; i < 5; i++) {
+        //         data += '<br>';
+        //         for (j = 0; j < 5; j++) {
+        //             data += array[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+        //         }
+        //     }
+        //
+        // b.innerHTML = '<hr>' + data
+        //
+        // if(array[nhap1][nhap2] === 'x'){
+        //     array[nhap1][nhap2] = 'y'
+        // }else {
+        //     array[nhap1][nhap2] = 'x';
+        // }
+    }
+*/
+
+
+    function checkWin() {
+        return false;
+    }
+</script>
+
+</body>
+</html>

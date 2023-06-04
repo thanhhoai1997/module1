@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [5,3,6,18,16,12]
+    let max = array[0];
+    let chi_muc = 0
+    for (let i = 0;i <array.length;i++){
+        if (array[i] > max){
+            max = array[i];
+            chi_muc = i;
+
+        }
+    }
+    document.write(chi_muc + ': '+ max )
+</script>
+
+</body>
+</html>

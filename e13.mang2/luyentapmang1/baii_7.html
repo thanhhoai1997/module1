@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let a = [];
+    let v = parseInt(prompt('nhap v'))
+    for (let i = 0; i < 10; i++) {
+        a[i] = parseInt(prompt('nhap pt vao mang'))
+    }
+    for( let j = 0; j < a.length ; j++){
+        if (a[j] === v){
+            a.splice(j, 1);
+            a.push(0);
+        }
+    }
+
+    console.log(a);
+</script>
+
+</body>
+</html>
