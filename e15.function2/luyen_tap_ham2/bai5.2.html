@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt('nhap a');
+    let b = +prompt('nhap b');
+    let c = +prompt('nhap c');
+
+    function ktraMin(a,b,c) {
+        let min ;
+
+        if (a < b && a< c){
+            min = a
+            return min
+        }else {
+            if (b > c){
+                min = c
+                return min
+            }else {
+                min = b
+                return min
+            }
+        }
+
+    }
+    let ktr_min = ktraMin(a,b,c)
+    document.write(ktr_min)
+
+
+</script>
+
+</body>
+</html>

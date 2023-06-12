@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // function myFunction() {
+    //      let firstArg = arguments[0];
+    //      let secondArg = arguments[1];
+    //      alert(firstArg);
+    //      alert(secondArg);
+    //
+    //
+    // }
+    // myFunction('hello','word');
+    // let aNewVariable = "i globals.";
+    // function doSomething(incomingBits) {
+    //     alert("Global variable within the function: " +aNewVariable);
+    //     alert("Local variable within the function: " + incomingBits);
+    //
+    // }
+    // doSomething("is a local variable");
+    // alert("Global var outside the function: " + aNewVariable);
+    // alert("Local var outside the function: " + incomingBits);
+    // function addNumbers(){
+    //     var firstNum = 4;
+    //     var secondNum = 8;
+    //     let result = firstNum + secondNum;
+    //     return result;
+    // }
+    // let result = 0;
+    // let sum = addNumbers();
+    // console.log(result)
+   //  function myFunction(x) {
+   //      if (x == 1){
+   //          return true;
+   //      }else {
+   //          return false;
+   //      }
+   //  }
+   // let a =  myFunction(1);
+   //  console.log(a)
+   //  function orderFruit() {
+   //      let total = 0;
+   //      // Call another function to place order
+   //      return total;
+   //  }
+   //  let result = orderFruit();
+   //  alert("The total is " + result);
+   //  let divNums = function (firstNum, secondNum) {
+   //      return firstNum/secondNum;
+   //  }
+   //  alert(divNums)
+   //  function myFunction() {
+   //      let myNum = 10;
+   //      function showNum() {
+   //          alert(myNum);
+   //      }
+   //      return showNum();
+   //  }
+   //  let callFunc = myFunction();
+   //  alert(callFunc)
+   //  function square(x) {
+   //      x =  x * x;
+   //      return x
+   //  }
+   //  let y = 10
+   //  let c = square(y);
+   //  ;
+   //  console.log(c);
+   //  console.log(y)
+   //  function turnOn(machine) {
+   //      machine.isOn = true;
+   //  }
+   //  let computer = {
+   //      isOn: false
+   //  };
+   //  turnOn(computer);
+   //  console.log(computer.isOn);
+   //  function swap(a, b) {
+   //      var temp = a; //5
+   //      a = b; //a = 10
+   //      b = temp;// 5
+   //      return [a , b];
+   //  }
+   //
+   //  var a = 5;
+   //  var b = 10;
+   //  let c = swap(a, b);
+   //  document.write("a = " + a + ", b = " + b);
+   //  document.writeln(c)
+    function func1(a){
+        if(a == 2)
+            return 2;
+        return a* func1(a-1);
+    }
+    var a = func1(5);
+    document.writeln(a)
+
+
+</script>
+
+</body>
+</html>

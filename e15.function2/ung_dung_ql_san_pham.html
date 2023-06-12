@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="button" onclick="taoMenu()" value="xem Menu">
+</form>
+<p id="h1"></p>
+
+
+<script>
+
+    let arr = ['Cafe', 'Chanh Dây', 'Cacao', 'Milo Dầm', 'Trà Sữa', 'Kem Plant', 'Sữa Chua Việt Quốc', 'Trà Gừng']
+
+    function taoMenu() {
+        let them = '<form>' + '<label>' + 'Thêm Sản Phẩm' + '</label>' + '<br>' + '<input type="text" id="them">' + '<input type="button" value="Thêm" ">' + '</form>'
+        document.write(them)
+        document.write('<br>')
+        let chinhsua = '<form>' + '<label>' + 'Sửa sản phẩm' + '</label>' + '<br>' + '<input type="text" id="sua">'
+            + '<input type="button" value="Sửa" onclick="chinhSua()">'
+            + '<input type="hidden" value="1" id="selectedId">'
+        document.write(chinhsua)
+        document.write('<br>')
+        document.write('<br>')
+
+
+        let data = '<table border="1">' + '<tr>' + '<th>' + 'STT' + '</th>'
+            + '<th>' + 'Tên Đồ Uống' + '</th>'
+            + '<th>' + 'Chỉnh Sửa' + '</th>'
+            + '<th>' + 'Xóa' + '</th>' + '</tr>'
+        for (let i = 1; i <= arr.length; i++) {
+
+            data += `<tr>
+                <td>${i}</td>
+                <td><span onclick="suaTenSanPham('${arr[i]}', ${i})" id="${i}">${arr[i]}</span></td>
+                <td><button>Edit</button></td>
+                 <td><button>Delete</button></td>
+              </tr>`
+
+
+            // data += '<tr>' + '<td>' + (i + 1) + '</td>'
+            //     + '<td id="${i + 1}" onclick="suaTenSanPham(`'+arr[i]+'`)">' + arr[i] + '</td>' +
+            //     '<td>' + '<input  type="button" value="Edit">' + '</td>'
+            //     + '<td>' + '<input type="button" value="Delete">' + '</td>' +
+            //     '</tr>';
+        }
+
+        data += '</table>'
+        document.write(data)
+
+    }
+
+    function themSanPham() {
+        let a = document.getElementById('them').value;
+        arr.push(a);
+        alert('đã Thêm ' + a + ' vào Menu');
+
+        taoMenu();
+
+    }
+
+    function suaTenSanPham(name, id) {
+        sua.value= name;
+        selectedId.value = id;
+        // document.getElementById("sua").value = param;
+        // document.getElementById("").v
+    }
+
+    // let a = document.getElementById("sua").value
+
+    function chinhSua() {
+          const newValue = sua.value;
+        console.log(selectedId.value);
+           document.getElementById(selectedId.value).innerHTML = newValue;
+    }
+
+</script>
+
+</body>
+</html>

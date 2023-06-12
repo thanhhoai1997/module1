@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //chuvi = 2*pi*r
+    // dientich = r^2*pi
+    let ban_kinh = +prompt('nhap ban kinh');
+    const pi = 3.14;
+    function chuVi(ban_kinh,pi) {
+        return 2*ban_kinh*pi;
+    }
+    function dienTich(ban_kinh,pi) {
+        return ban_kinh*ban_kinh*pi
+
+    }
+    let chu_vi =  chuVi(ban_kinh,pi)
+    document.write('chu vi = ' + chu_vi + '<br>');
+    let dien_tich = dienTich(ban_kinh,pi)
+    document.write('dien tich = ' + dien_tich)
+
+
+</script>
+</html>

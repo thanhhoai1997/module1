@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let ki_tu = prompt('nhap ki tu bat ki')
+    let arrChar = [];
+    for (i = 0;i  < 10; i++){
+        arrChar[i] = prompt('nhap ki tu cho mang')
+
+    }
+
+    let count = 0
+    function ktraKiTu(arrChar,ki_tu) {
+
+        for (i = 0; i < arrChar.length; i++){
+            if (arrChar[i] === ki_tu){
+                count++
+            }
+
+        }
+        if(count > 0){
+            return count;
+        }else if (count === 0)
+
+        return -1
+
+    }
+    let ktr= ktraKiTu(arrChar,ki_tu);
+    document.writeln('ki tu '+ ki_tu + ' xuat hien ' + ktr + ' lan trong chuoi' )
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // meter = 0.305 * foot
+    // foot = 3.279 * meter
+
+    function footToMeter(foot) {
+
+        let meter = 0.305 * foot;
+        return meter;
+    };
+    function meterToFoot(meter){
+        let foot = 3.279 * meter
+        return foot;
+    }
+
+let gia_tri = + prompt('nhap gia tri de chuyen doi');
+    let a = footToMeter(gia_tri);
+    document.write(gia_tri + ' foot' + ' =' + a + ' meter' + '<br>');
+    let b = meterToFoot(gia_tri);
+    document.writeln(gia_tri + ' meter' + ' =' + b + ' foot' + '<br>');
+</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1 = [ 'Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe' ,'Regulus'];
+    let arr2 =['Ursa Minor', 'Tarurus','Cygnus', 'Lyra', 'Aquila', 'Ursa Major','Leo'];
+    let nhap = prompt('nhap ten ngoi sao')
+     function timKiem(arr1) {
+
+         for (let i = 0; i < arr1.length; i++){
+             if (nhap === arr1[i] ){
+                 arr1[i] = arr2[i]
+                return arr1[i];
+             }
+
+         }
+         // for (let i = 0 ; i < arr1.length; i++){
+         //     if (nhap !== arr1[i]){
+         //         document.writeln('khong tim thay ngoi sao nao')
+         //         break;
+         //     }
+         // }
+         return 'khong tim thay gia tri nao';
+
+    }
+    let kiem_tra = timKiem(arr1);
+    document.writeln(kiem_tra)
+
+
+</script>
+</body>
+</html>
