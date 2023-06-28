@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  class SwitchButton{ // cong tac
+    constructor(status) {
+      this.status = status
+    }
+    connectToLamp(){//ket noi voi bong den
+    alert('da ket noi giua cong tat v bong den');
+  }
+  switchOff(lamp){ //tat
+alert('ban muon tat cong tat ?');
+    this.status = 'tat';
+    lamp.turnOff()
+  }
+  switchOn(LamP){ //bat
+      alert('ban muon bat cong tat?')
+    this.status = 'bat';
+      LamP.turnOn()
+
+  }
+
+  }
+  class ElectricLamp extends SwitchButton{
+    constructor(status) {
+      super(status);
+    }
+    turnOff(){
+      if (this.status = 'tat'){
+        alert('bong den da tat')
+      }
+
+    }
+    turnOn(){
+      if (this.status = 'bat'){
+        alert('bong den da bat')
+      }
+
+    }
+  }
+  let switchButton = new SwitchButton();
+  let electricLamp = new ElectricLamp();
+
+  for (let i = 1  ; i<= 10;i++){
+    switchButton.switchOn(electricLamp);
+  }
+
+
+
+</script>
+
+</body>
+</html>

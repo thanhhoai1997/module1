@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let char = prompt('nhap chuoi ki tu')
+
+
+   function chuanHoa (char){
+
+      let a = char.toLowerCase().split(' ')
+       let arrnew ='' ;
+       for(let  i = 0;i < a.length;i++){
+
+           if (a[i] !== ''){
+               arrnew += a[i] + ' ';
+                   }
+
+           }
+
+       let arrnew1 = arrnew.split('');
+       arrnew1.pop()
+         for (let i = 0;i < arrnew1.length;i++){
+           arrnew1[0] = arrnew1[0].toUpperCase()
+           if (arrnew1[i] === ' '){
+                arrnew1[i+1] = arrnew1[i+1].toUpperCase()
+            }
+        }
+
+
+       return arrnew1.join('');
+
+  };
+
+
+  let chuanhoa = chuanHoa (char);
+  function max (chuanhoa){
+      let chuanhoa2 = chuanhoa.split(' ')
+      let max = chuanhoa2[0];
+      for (let i =0;i<chuanhoa2.length;i++){
+          if (chuanhoa2[i].length > max.length){
+              max = chuanhoa2[i];
+          }
+
+      }
+      return max;
+
+  }
+
+
+  console.log(chuanhoa);
+  let dodai = max(chuanhoa);
+  console.log(dodai);
+
+
+
+
+</script>
+
+</body>
+</html>

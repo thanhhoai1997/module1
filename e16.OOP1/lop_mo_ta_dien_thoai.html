@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Mobile(pin) {
+        this.pin = pin;
+        this.soantinnhan = '';
+        this.hopthuden = '';
+        this.tinnhangui = '';
+
+
+            this.onOff = function () {
+                if (pin < 0) {
+                    alert('dien thoai off');
+                } else {
+                    alert('dien thoai on');
+                }
+                this.pin = this.pin - 1
+            }
+            this.onMobile = function () {
+                alert('dien thoai da bat')
+                this.pin = this.pin - 1
+            }
+            this.offMobile = function () {
+                alert('dien thoai da tat')
+                this.pin = this.pin - 1
+            }
+            this.sacPin = function () {
+                alert('Dang Sac : ' + (this.pin + 1))
+
+            }
+
+            this.soanTinNhan = function () {
+                let a = prompt('nhap tin nhan ');
+                this.soantinnhan = a
+                this.pin = this.pin - 1
+
+            }
+            this.guiTinNhan = function (){
+                this.tinnhangui = this.soantinnhan;
+                return this.tinnhangui
+
+            }
+        this.nhanTinNhan = function (mobile) {
+                mobile.guiTinNhan()
+
+        }
+
+            this.xemHopThuDen = function () {
+                this.pin = this.pin - 1
+                this.tinnhangui = this.hopthuden
+               alert(this.hopthuden)
+            }
+            this.xemTinDaGui = function () {
+                this.pin = this.pin - 1
+               return this.tinnhangui;
+            }
+
+        }
+        let iphone = new Mobile()
+        let nokia = new Mobile()
+        nokia.soanTinNhan()
+        nokia.guiTinNhan()
+
+     let checkMessenger = iphone.guiTinNhan(nokia)
+    console.log(checkMessenger)
+
+
+
+
+
+</script>
+
+</body>
+</html>

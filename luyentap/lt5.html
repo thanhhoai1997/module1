@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [2,4,6,7,5,3,5,6];
+    let b = [2,3,4,9,10,10,3,5,6];
+    a.sort();
+    b.sort()
+    let c =[];
+    console.log(a);
+    console.log(b)
+    for (let i = 0; i < b.length;i++){
+        if (a.indexOf(b[i]) === -1){
+            c.push(b[i]);
+
+        }
+    }
+    console.log(c)
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id='h1'></p>
+<script>
+    class Student {
+        constructor(mahocvien, ten, lop, email, ngaysinh, module) {
+            this.mahocvien = mahocvien;
+            this.ten = ten;
+            this.lop = lop;
+            this.email = email;
+            this.ngaysinh = ngaysinh;
+            this.module = module;
+        }
+
+        themHocVien() {
+            let student = {
+
+                mahocvien: prompt('Nhập Mã Học Viên'),
+                ten: prompt('Nhập Tên Học Viên'),
+                lop: prompt('Nhập Lớp'),
+                email: prompt('Nhập Email'),
+                ngaysinh: prompt('Nhập ngày sinh ')
+            }
+            for (let i = 0; i < arrStudent.length; i++) {
+                if (student.mahocvien === arrStudent[i].mahocvien) {
+                    alert('Mã HV đã có trong DS')
+
+                }
+
+            }
+
+            arrStudent.push(student);
+
+            showStudents()
+        }
+
+        suaThongTinHocVien() {
+            let maHV = prompt('Nhập vào mã học viên can sửa');
+            for (let i = 0; i < arrStudent.length; i++) {
+                if (arrStudent[i].mahocvien === maHV) {
+                    arrStudent[i].ten = prompt('mời bạn sửa lại tên');
+                    arrStudent[i].lop = prompt('mời bạn nhập lại lớp');
+                    arrStudent[i].email = prompt('mời bạn nhập lại Email');
+                    arrStudent[i].ngaysinh = prompt('mời bạn nhập lại ngày sinh');
+                }
+
+            }
+
+
+            let a = arrStudent.some(function (student, maHV) {
+                return maHV !== student.mahocvien;
+
+            })
+            if (a === false) {
+                alert('Sai Mã')
+            }
+            let b = arrStudent.some(function (student, maHV) {
+                return maHV === student.mahocvien;
+
+            })
+            if (b === false) {
+                alert('Sai Mã')
+            }
+
+            showStudents()
+
+        }
+
+        xoaHocVien() {
+            let maHV = prompt('nhập mã học viên cần xóa: ')
+            for (let i = 0; i < arrStudent.length; i++) {
+                if (arrStudent[i].mahocvien === maHV) {
+                    let a = confirm('bạn muốn xóa HV khỏi ds k ? ');
+                    if (a === true) {
+                        arrStudent.splice(i, 1);
+                    }
+                }
+
+            }
+
+            showStudents()
+
+        }
+
+    }
+
+    let student0 = new Student('HV-0001', 'Nguyen Van A', 'A04231', 'hoain5990@gmail.com', '12/02/1997');
+    let student1 = new Student('HV-0002', 'Nguyen Van B', 'A04231', 'thanhdo@gmail.com', '02/09/1996');
+    let student2 = new Student('HV-0003', 'Nguyen Van C', 'A04231', 'class1234@gmail.com', '04/11/1994');
+    let student3 = new Student('HV-0004', 'Nguyen Van D', 'A04231', 'ctg4@gmail.com', '09/01/1994');
+
+    let arrStudent = [student0, student1, student2, student3];
+
+    function showStudents() {
+        let data1 = '<form>' +
+            '<input type="button" value="Thêm Mới Học Viên" onclick="student0.themHocVien()">' + '&nbsp&nbsp' +
+            '<input type="button" value="Sửa thông tin học viên" onclick="student0.suaThongTinHocVien()">' + '&nbsp&nbsp' +
+            '<input type="button" value="Xóa học viên" onclick="student0.xoaHocVien()">' + '</form>'
+
+
+        let data = data1 + '<br>' + '<table border="1">' + '<tr>' +
+            '<th>' + 'Mã Học Viên' + '</th>' +
+            '<th>' + 'Tên' + '</th>' +
+            '<th>' + 'Lớp' + '</th>' +
+            '<th>' + 'Email' + '</th>' +
+            '<th>' + 'Ngày Sinh' +
+            '</th>' + '<tr>'
+        for (let i = 0; i < arrStudent.length; i++) {
+
+            data += '<tr>' +
+                '<td>' + arrStudent[i].mahocvien + '</td>' +
+                '<td>' + arrStudent[i].ten + '</td>' +
+                '<td>' + arrStudent[i].lop + '</td>' +
+                '<td>' + arrStudent[i].email + '</td>' +
+                '<td>' + arrStudent[i].ngaysinh +
+                '</td>' + '</tr>'
+
+
+        }
+
+        data += '</table>'
+        document.getElementById('h1').innerHTML = data
+
+    }
+
+    showStudents();
+
+
+</script>
+
+</body>
+</html>

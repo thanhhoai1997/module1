@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Rat {
+        constructor(name, weight, speed, quantity) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+            this.quantity = quantity;
+            this.status = true;
+
+        }
+
+        getQuantity() {
+            console.log('so luong cua dan '+ this.name + ' con lai la:  ' + this.quantity + ' con');
+
+        }
+
+        nois() {
+            if (this.status) {
+                console.log('chit chit');
+            } else {
+                console.log('chuot da chet')
+                this.speed = 0;
+                this.weight = this.weight / 2;
+            }
+
+        }
+    }
+
+    class Cat {
+        constructor(name, weight, speed) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+
+        }
+
+        nois() {
+            console.log('meo meo');
+        }
+
+        hunting(mouse) {   //san bat
+
+            mouse.nois();
+            this.nois();
+            if (this.speed > mouse.speed) {
+                console.log(this.name + ' dang chay voi toc do toi da la ' + this.speed + 'km/h');
+                console.log(mouse.name + ' dang chay voi toc ' + mouse.speed + 'km/h');
+                console.log('vi toc do cua  ' + this.name + ' > toc do cua ' + mouse.name + ' nen ');
+                console.log(this.name + ' da bat duoc ' + mouse.name);
+
+            } else {
+                console.log(this.name + ' dang chay voi toc do toi da la ' + this.speed + 'km/h')
+                console.log(mouse.name + ' dang chay voi toc ' + mouse.speed + 'km/h');
+                console.log('vi toc do cua  ' + this.name + ' < toc do cua ' + mouse.name + ' nen ')
+                console.log(this.name + ' khong bat duoc ' + mouse.name);
+            }
+
+        }
+
+        eat(mouse) {    // an thit
+            if (mouse.status) {
+
+                console.log(this.name + ' dang an thit ' + mouse.name);
+                console.log('khoi luong cua ' +this.name +  ' duoc tang them ' + mouse.weight + ' kg');
+                this.weight += mouse.weight
+                mouse.quantity--
+            } else {
+                mouse.nois()
+            }
+
+        }
+
+        getWieght() {
+            console.log('khoi luong hien tai cua ' + this.name + ' la ' + this.weight + ' kg')
+        }
+
+    }
+
+    let rat = new Rat('Mouse', 1, 100, 10);
+    let cat = new Cat('Cat', 5, 200);
+    cat.hunting(rat);
+    cat.eat(rat);
+    cat.getWieght();
+    rat.getQuantity();
+
+
+</script>
+
+</body>
+</html>

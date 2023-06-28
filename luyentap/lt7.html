@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ol>
+    <li>cafe</li>
+    <li>cam vắt</li>
+    <li>Nước ép cà rốt</li>
+    <li>Nước ép cà chua</li>
+    <li>Nước lọc</li>
+    <li>Nước dừa</li>
+
+</ol>
+<form>
+    <input type="button" onclick="ham1()" value="moi ban chon">
+</form>
+<script>
+    function ham1(){
+
+        let arr = ['cafe','cam vắt','Nước ép cà rốt','Nước ép cà chua','Nước lọc','Nước dừa'];
+        let dongia = [15,20,25,25,10,30];
+
+        do {
+            let chon = +prompt('nhap so thu tu thuc uong muon chon');
+            for (let i = 0; i < arr.length; i++) {
+
+                if (chon === i + 1) {
+
+                    alert(arr[i] + ' co gia la ' + dongia[i] + 'k')
+                    let soluong = +prompt('nhap so luong muon mua : ');
+                    let tongsotien = soluong * dongia[i]
+                    alert('so tien ban can thanh toan la  ' + tongsotien + 'k')
+
+                }
+            }
+
+        }while (chon === 7) ;
+
+
+
+    }
+
+
+</script>
+
+</body>
+</html>

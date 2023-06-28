@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id ='myCanvas' width="200" height="100"></canvas>
+<script>
+    var c = document.getElementById('myCanvas');
+    var ctx = c.getContext("2d");
+    //ve duong thng
+    ctx.moveTo(0,0);
+    ctx.lineTo(200,100)
+    ctx.stroke()
+
+   //ve duong tron
+    ctx.beginPath();
+    ctx.arc(95,50,40,0,2*Math.PI);
+    ctx.stroke();
+    //ve chu
+    ctx.font = "30px Arial";
+    ctx.fillText("Hello World",10,50);
+    //hieu ung gradient
+    var grd = ctx.createLinearGradient(0,0,200,0);
+    grd.addColorStop(0,"red");
+    grd.addColorStop(1,"white");
+    ctx.fillStyle = grd;
+    ctx.fillRect(10,10,150,80);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let luong_nhan_vien = +prompt('nhap luong nhan vien')
+    let thue_thu_nhap;
+    let luong_thuc_su;
+    let thuemuc1 = (6999999*5)/100;
+    let thuemuc2 = ((14999999-7000000)*10)/100;
+    if(luong_nhan_vien < 7000000){
+         thue_thu_nhap = (luong_nhan_vien*5)/100;
+        luong_thuc_su = luong_nhan_vien - thue_thu_nhap;
+        alert('thue thu nhap = ' + thue_thu_nhap )
+        alert('luong thuc su = ' + luong_thuc_su)
+    }else if (luong_nhan_vien >= 7000000 && luong_nhan_vien <=15000000){
+        thue_thu_nhap = thuemuc1 + ((luong_nhan_vien-6999999)*10)/100;
+        luong_thuc_su = luong_nhan_vien - thue_thu_nhap;
+        alert('thue thu nhap = ' + thue_thu_nhap )
+        alert('luong thuc su = ' + luong_thuc_su)
+    }else {
+        thue_thu_nhap = thuemuc2 + thuemuc1 + ((luong_nhan_vien - 14999999)*20)/100;
+        luong_thuc_su = luong_nhan_vien - thue_thu_nhap;
+        alert('thue thu nhap = ' + thue_thu_nhap )
+        alert('luong thuc su = ' + luong_thuc_su)
+    }
+</script>
+
+</body>
+</html>

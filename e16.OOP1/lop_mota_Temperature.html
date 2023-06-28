@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //chuyen doi tu C ->f  ℃ = (℉-32)/1.8
+    //chuyen doi tu C -> : °C = K – 273.15
+    function Temperature(triso){
+        this.triso  = triso;
+      this.doiF = function (){
+          let doF = this.triso*1.8 +32;
+          return doF;
+      }
+      this.doiK = function (){
+          let doK = triso + 273.15
+          return doK;
+      }
+
+    }
+    let temperature = new Temperature(25)
+    let a = temperature.doiF();
+    let b = temperature.doiK()
+    document.writeln(a + ':' + b)
+
+</script>
+</body>
+</html>

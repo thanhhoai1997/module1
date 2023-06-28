@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // class Apple1{
+    //   constructor(weight) {
+    //     this.weight = weight;
+    //   }
+    //
+    //   get Weight(){
+    //     return "aaa" + this.Weight;
+    //   }
+    // }
+
+    function Apple(weight) {
+        this.weight = 10;
+        this.decrease = function () {
+            this.weight--
+        }
+        this.getWight = function () {
+            return this.weight
+        }
+    }
+
+    function Human(name, gender, weight) {
+        this.name = name;
+        this.gender = gender;
+        this.weight = weight;
+        this.setGender = function () {
+            if (this.gender === 'nam') {
+                alert('gioi tinh nam')
+            } else if (this.gender === 'nu') {
+                alert('gioi tinh nu')
+            }
+        }
+        this.say = function () {
+            alert('i am ' + this.name);
+        }
+        this.checkApple = function (apple) {
+            return apple.getWight();
+        }
+        this.eatApple = function (apple) {
+            if (apple.getWight() > 0) {
+                apple.weight--
+                this.weight++
+            } else {
+                return 'het cmn tao roi ban oi'
+            }
+            return this.weight
+        }
+        this.getName = function (getName) {
+            return 'toi ten ' + getName.name;
+
+
+        }
+        this.getWeight = function (getWeight) {
+            return 'toi nang : ' + getWeight.weight
+        }
+
+    }
+
+    let adam = new Human('adam', 'nam', 56);
+    let eva = new Human('eva', 'nu', 49);
+    let apple = new Apple()
+    adam.setGender();
+    adam.say();
+    adam.eatApple(apple);
+    console.log(adam.checkApple(apple));
+    console.log(adam.weight);
+    console.log(adam.getName(eva));
+    console.log(adam.getWeight(eva))
+</script>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Remote {
+        constructor(code) {
+            this.code = code;
+
+        }
+
+        connect(tv) {   // ket noi
+            if (this.code === tv.codetv) {
+                console.log('da ket noi toi tivi')
+            } else {
+                console.log('sai ma ket noi')
+            }
+        }
+
+        onRemote(tv) {
+            tv.status = true
+            tv.onOffTv();
+
+        }
+
+        offRemote(tv) {
+            tv.status = false
+            tv.onOffTv();
+        }
+
+        changeTVchannel(tv, number) {  //chuyen kenh
+            tv.channelSwitchingControl(number);
+
+
+        }
+
+        volumeControl(tv, number) {
+            if (number > 0) {
+                tv.volumeControlTV(number);
+            } else {
+                tv.volumeControlTV(number);
+            }
+
+        }
+    }
+
+    class TV {
+        constructor(code, describe, volume) {
+            this.codetv = code
+            this.describe = describe; // mo ta kenh
+            this.volume = volume;
+            this.status = true;
+        }
+        onOffTv() {
+            if (this.status === true) {
+
+                console.log('da bat TiVi');
+            } else {
+
+                console.log('da tat Tivi');
+            }
+
+        }
+        channelSwitchingControl(number) {
+            if (this.status) {
+                this.describe = number;
+                console.log('tivi dang chuyen den kenh ' + this.describe);
+
+            } else {
+                console.log('ban chua bat tivi');
+            }
+
+        }
+
+        volumeControlTV(number) {
+            if (number > 0) {
+                console.log('tang am luong len ' + number);
+                this.volume += number;
+                console.log('am luong hien tai:  ' + this.volume)
+            } else {
+                console.log('giam am luong xuong ' + number);
+                this.volume += number;
+                console.log('am luong hien tai ' + this.volume)
+
+            }
+        }
+
+    }
+
+    let remote = new Remote(1120)
+    let tv = new TV(1120, 1, 20)
+    remote.onRemote(tv)
+    remote.connect(tv)
+    tv.channelSwitchingControl(7)
+    remote.changeTVchannel(tv, 3)
+    remote.volumeControl(tv, 2)
+    remote.volumeControl(tv, (-5))
+    remote.changeTVchannel(tv, 8)
+    remote.offRemote(tv)
+
+
+</script>
+
+</body>
+</html>

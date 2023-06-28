@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= i; j++) {
+        if( i === 1 || i === 2 || i === 5){
+            document.writeln('*')
+
+            }else if (i === 3) {
+            if(j === 2 ){
+                document.writeln('&nbsp&nbsp');
+
+            }else {
+                document.writeln('*')
+            }
+
+            }else {
+            if (j === 2 || j === 3 ){
+                document.writeln('&nbsp&nbsp');
+            }else {
+                document.writeln('*')
+            }
+        }
+
+        }
+        document.write('<br>')
+                }
+
+
+</script>
+
+</body>
+</html>

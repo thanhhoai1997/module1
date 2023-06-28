@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id = 'myCanvas' width="500" height="500"></canvas>
+<script>
+    function Rectangle(chieudai,chieurong){
+        this.chieudai = chieudai;
+        this.chieurong = chieurong;
+        this.dientich = function (){
+            return chieudai*chieurong;
+
+        }
+        this.chuvi = function (){
+            return 2*(chieurong+chieurong);
+        }
+        this.vehinh = function (){
+           let  hinh = document.getElementById('myCanvas').getContext('2d');
+            hinh.fillRect(3,3,this.chieudai,this.chieurong);
+
+
+        }
+
+    }
+    let rectangle = new Rectangle(100,70)
+    rectangle.vehinh()
+    rectangle.chieudai = 300;
+    rectangle.chieurong = 200;
+    rectangle.vehinh()
+    document.write('S =' + rectangle.dientich() + '<br>')
+    document.write('CV =' + rectangle.chuvi())
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a1 = 'aabcceegdaf'
+    let a2 = 'adcaaeeafd'
+
+    console.log(a1.split('').sort())
+    console.log(a2.split('').sort())
+    let b1 = a1.split('').sort()
+    let b2 = a2.split('').sort()
+    let b3 = [];
+    let count = 0;
+    for (let i = 0;i < b1.length;i++){
+        if (b1[i] === b2[i] ){
+            b3.push(b1[i]);
+            count++
+
+        }
+    }
+    console.log(b3);
+    console.log('co ' + count + ' ki tu giong nhau')
+</script>
+
+</body>
+</html>
